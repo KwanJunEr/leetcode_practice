@@ -63,3 +63,14 @@ GROUP BY e.id, e.name
 HAVING COUNT(m.managerId) >= 5
 
 --use self join
+
+
+--Using nested queries method 
+
+SELECT name 
+FROM Employee 
+WHERE id IN (
+    SELECT managerId 
+    FROM Employee 
+    GROUP BY managerId 
+    HAVING COUNT(*) >= 5)

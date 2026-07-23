@@ -63,6 +63,8 @@ Follow up: A linked list can be reversed either iteratively or recursively. Coul
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+//0,1,2,3
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode curr = head; 
